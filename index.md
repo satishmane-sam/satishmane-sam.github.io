@@ -48,21 +48,21 @@ title: Home
 </section>
 
 <section class="highlights">
-  <article class="highlight-card">
+  <a class="highlight-card" href="https://github.com/satishmane-sam">
     <span class="card-icon">🔧</span>
     <h2>Build</h2>
     <p>Open-source CLI tools and scripts for real production problems.</p>
-  </article>
-  <article class="highlight-card">
+  </a>
+  <a class="highlight-card" href="#posts">
     <span class="card-icon">📝</span>
     <h2>Write</h2>
     <p>Clear write-ups when something breaks — commands, context, and the fix.</p>
-  </article>
-  <article class="highlight-card">
+  </a>
+  <a class="highlight-card" href="/about/">
     <span class="card-icon">🚀</span>
     <h2>Ship</h2>
     <p>Preflight checks, automated workflows, and lessons from the field.</p>
-  </article>
+  </a>
 </section>
 
 <section class="topics-strip">

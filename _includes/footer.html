@@ -1,3 +1,12 @@
+<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</a>
+<script>
+(function(){
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+})();
+</script>
 <footer class="site-footer">
   <div class="footer-wrapper">
     <div class="footer-grid">
@@ -47,11 +56,13 @@
               <span class="social-icon">◉</span> Subscribe via RSS
             </a>
           </li>
+          {%- unless site.email contains "noreply" -%}
           <li>
             <a href="mailto:{{ site.email }}">
               <span class="social-icon">✉</span> {{ site.email }}
             </a>
           </li>
+          {%- endunless -%}
         </ul>
       </div>
     </div>

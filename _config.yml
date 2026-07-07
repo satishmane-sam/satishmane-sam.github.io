@@ -9,8 +9,18 @@ markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title.html
 show_excerpts: true
 
-author: Satish Mane
+author:
+  name: Satish Mane
+  url: https://github.com/satishmane-sam
 email: satishmane-sam@users.noreply.github.com
+
+twitter:
+  card: summary
+
+social:
+  name: Satish Mane
+  links:
+    - https://github.com/satishmane-sam
 
 github_username: satishmane-sam
 
@@ -25,6 +35,13 @@ minima:
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /favicon.svg
 
 exclude:
   - README.md

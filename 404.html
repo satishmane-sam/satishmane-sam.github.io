@@ -1,0 +1,28 @@
+---
+layout: default
+title: "404"
+permalink: /404.html
+---
+
+<div class="error-404">
+  <div class="error-terminal">
+    <div class="terminal-bar">
+      <span></span><span></span><span></span>
+      <p>satish@fedora ~</p>
+    </div>
+    <pre class="terminal-body"><code><span class="t-prompt">$</span> curl -s {{ page.url }}
+<span class="t-warn">404</span> <span class="t-dim">— page not found</span>
+
+<span class="t-prompt">$</span> find / -name "this-page" -type f
+<span class="t-dim">(no results)</span>
+
+<span class="t-prompt">$</span> echo "let's go home"
+<span class="t-ok">→ redirecting...</span></code></pre>
+  </div>
+  <h1>404</h1>
+  <p>This page doesn't exist — maybe it was moved, renamed, or never created.</p>
+  <div class="error-actions">
+    <a class="btn btn-primary" href="{{ '/' | relative_url }}">Go home</a>
+    <a class="btn btn-ghost" href="{{ '/' | relative_url }}#posts">Read the blog</a>
+  </div>
+</div>
