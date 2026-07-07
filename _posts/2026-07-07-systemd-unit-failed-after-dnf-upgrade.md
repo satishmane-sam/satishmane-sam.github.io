@@ -6,6 +6,8 @@ categories: [linux, devops, systemd]
 author: Satish Mane
 ---
 
+A custom service stopped starting after a Fedora `dnf upgrade` — the binary path had moved and the systemd unit file was still pointing to the old location.
+
 ## Problem
 
 After upgrading packages on Fedora with `dnf upgrade`, a custom app service refused to start. `journalctl` showed:

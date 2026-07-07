@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<div class="about-page">
+<div class="about-page" markdown="1">
 
 I'm **Satish Mane** — a Linux and DevOps practitioner who writes about real infrastructure work, not theory.
 
