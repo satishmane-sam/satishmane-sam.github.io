@@ -1,86 +1,27 @@
 <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</a>
+
+<footer class="site-footer">
+  <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: site.author | default: site.title | escape }}</p>
+  <p>Built with Jekyll &middot; Hosted on <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub Pages</a></p>
+</footer>
+
 <script>
 (function(){
+  // Back to top
   var btn = document.getElementById('backToTop');
   window.addEventListener('scroll', function(){
     btn.classList.toggle('visible', window.scrollY > 400);
   });
+
+  // Sidebar toggle
+  var sidebarBtn = document.querySelector('[data-sidebar-btn]');
+  var sidebar = document.querySelector('[data-sidebar]');
+  if (sidebarBtn && sidebar) {
+    sidebarBtn.addEventListener('click', function(){
+      sidebar.classList.toggle('active');
+      var txt = sidebarBtn.querySelector('span');
+      if (txt) txt.textContent = sidebar.classList.contains('active') ? 'Hide Contacts' : 'Show Contacts';
+    });
+  }
 })();
 </script>
-<footer class="site-footer">
-  <div class="footer-wrapper">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="footer-logo" href="{{ '/' | relative_url }}">
-          <span class="brand-icon">&gt;_</span> {{ site.title | escape }}
-        </a>
-        <p class="footer-tagline">{{ site.description | escape }}</p>
-        <p class="footer-bio">
-          Real fixes from production — not tutorials rewritten from docs.
-          Every post starts with something that actually broke.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Navigate</h3>
-        <ul class="footer-links">
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/' | relative_url }}#posts">Latest posts</a></li>
-          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-          <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Topics</h3>
-        <ul class="footer-tags">
-          <li><a href="{{ '/' | relative_url }}#posts" class="tag-pill tag-green">Linux</a></li>
-          <li><a href="{{ '/' | relative_url }}#posts" class="tag-pill tag-blue">DevOps</a></li>
-          <li><a href="{{ '/' | relative_url }}#posts" class="tag-pill tag-purple">Kubernetes</a></li>
-          <li><a href="{{ '/' | relative_url }}#posts" class="tag-pill tag-orange">systemd</a></li>
-          <li><a href="{{ '/' | relative_url }}#posts" class="tag-pill tag-teal">Fedora</a></li>
-          <li><a href="{{ '/' | relative_url }}#posts" class="tag-pill tag-pink">Ansible</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Connect</h3>
-        <ul class="footer-social">
-          <li>
-            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
-              <svg class="social-svg" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-              GitHub
-            </a>
-          </li>
-          {%- if site.linkedin_username -%}
-          <li>
-            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
-              <svg class="social-svg" viewBox="0 0 16 16" fill="currentColor"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.19zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.616 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z"/></svg>
-              LinkedIn
-            </a>
-          </li>
-          {%- endif -%}
-          <li>
-            <a href="{{ '/feed.xml' | relative_url }}">
-              <svg class="social-svg" viewBox="0 0 16 16" fill="currentColor"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 12a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm2.5-.5a4 4 0 0 0-4-4v-1.5a5.5 5.5 0 0 1 5.5 5.5H6zm4 0a8 8 0 0 0-8-8V2a9.5 9.5 0 0 1 9.5 9.5H10z"/></svg>
-              Subscribe via RSS
-            </a>
-          </li>
-          {%- unless site.email contains "noreply" -%}
-          <li>
-            <a href="mailto:{{ site.email }}">
-              <svg class="social-svg" viewBox="0 0 16 16" fill="currentColor"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/></svg>
-              {{ site.email }}
-            </a>
-          </li>
-          {%- endunless -%}
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: site.author | default: site.title | escape }}. All rights reserved.</p>
-      <p class="footer-built">Built with Jekyll &middot; Hosted on GitHub Pages</p>
-    </div>
-  </div>
-</footer>

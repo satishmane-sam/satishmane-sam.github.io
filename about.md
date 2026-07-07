@@ -26,9 +26,8 @@ I'm **Satish Mane** — a Linux and DevOps practitioner who writes about real in
 ## Connect
 
 - **GitHub:** [satishmane-sam](https://github.com/satishmane-sam)
+- **LinkedIn:** [satishmane-code](https://linkedin.com/in/satishmane-code)
 - **Blog home:** [satishmane-sam.github.io](https://satishmane-sam.github.io/)
 - **RSS:** [feed.xml](https://satishmane-sam.github.io/feed.xml)
 
 </div>
-
-*Built with Jekyll on GitHub Pages. Posts are published from my local automation workflow.*

@@ -2,30 +2,32 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- if page.title and page.title != "" -%}
+  <h2 class="article-title">{{ page.title }}</h2>
+{%- endif -%}
 
-  {{ content }}
+{{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <section class="posts-section" id="posts">
-      <div class="posts-section-header">
-        <h2 class="post-list-heading">Latest posts</h2>
-        <a class="rss-link" href="{{ '/feed.xml' | relative_url }}">RSS feed →</a>
-      </div>
-      <ul class="post-list">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {%- for post in site.posts -%}
-        <li class="post-card">
+{%- if site.posts.size > 0 -%}
+  <section class="posts-section" id="posts">
+    <div class="posts-section-header">
+      <h2 class="article-title" style="margin-bottom:0">Latest Posts</h2>
+      <a class="rss-link" href="{{ '/feed.xml' | relative_url }}">RSS feed &rarr;</a>
+    </div>
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in site.posts -%}
+      <li class="post-card">
+        <div class="post-card-inner">
           <div class="post-card-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+            <span class="dot"></span>
             {%- assign words = post.content | number_of_words -%}
             {%- assign mins = words | divided_by: 200 -%}
             {%- if mins < 1 %}{% assign mins = 1 %}{% endif -%}
             <span class="post-reading-time">{{ mins }} min read</span>
             {%- if post.categories.size > 0 -%}
+              <span class="dot"></span>
               <span class="post-categories">{{ post.categories | join: " · " }}</span>
             {%- endif -%}
           </div>
@@ -35,10 +37,10 @@ layout: default
           {%- if post.excerpt -%}
             <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
           {%- endif -%}
-          <a class="read-more" href="{{ post.url | relative_url }}">Read article →</a>
-        </li>
-        {%- endfor -%}
-      </ul>
-    </section>
-  {%- endif -%}
-</div>
+          <a class="read-more" href="{{ post.url | relative_url }}">Read article &rarr;</a>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}
