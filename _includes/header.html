@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+  <div class="nav-wrapper">
+    <a class="site-brand" rel="author" href="{{ "/" | relative_url }}">
+      <span class="brand-icon">&gt;_</span>
+      <span class="brand-text">
+        <strong>{{ site.title | escape }}</strong>
+        <small>Linux &amp; DevOps Blog</small>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+      <a class="nav-link" href="{{ '/' | relative_url }}#posts">Blog</a>
+      <a class="nav-link{% if page.url contains '/about' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="nav-link nav-link-ghost" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a class="nav-link nav-link-accent" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>

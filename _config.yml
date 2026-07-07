@@ -9,8 +9,8 @@ markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title.html
 show_excerpts: true
 
-author:
-  name: Satish Mane
+author: Satish Mane
+email: satishmane-sam@users.noreply.github.com
 
 github_username: satishmane-sam
 
@@ -19,6 +19,9 @@ header_pages:
 
 minima:
   date_format: "%b %-d, %Y"
+  social_links:
+    github: satishmane-sam
+    rss: atom
 
 plugins:
   - jekyll-feed

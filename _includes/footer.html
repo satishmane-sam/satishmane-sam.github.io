@@ -1,0 +1,64 @@
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="{{ '/' | relative_url }}">
+          <span class="brand-icon">&gt;_</span> {{ site.title | escape }}
+        </a>
+        <p class="footer-tagline">{{ site.description | escape }}</p>
+        <p class="footer-bio">
+          Practical Linux &amp; DevOps notes — troubleshooting, CLI tools,
+          and production lessons from the terminal.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigate</h3>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/' | relative_url }}#posts">Latest posts</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Topics</h3>
+        <ul class="footer-tags">
+          <li><span class="tag-pill tag-green">Linux</span></li>
+          <li><span class="tag-pill tag-blue">DevOps</span></li>
+          <li><span class="tag-pill tag-purple">Kubernetes</span></li>
+          <li><span class="tag-pill tag-orange">systemd</span></li>
+          <li><span class="tag-pill tag-teal">Fedora</span></li>
+          <li><span class="tag-pill tag-pink">Ansible</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul class="footer-social">
+          <li>
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+              <span class="social-icon">⌘</span> GitHub — {{ site.github_username }}
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/feed.xml' | relative_url }}">
+              <span class="social-icon">◉</span> Subscribe via RSS
+            </a>
+          </li>
+          <li>
+            <a href="mailto:{{ site.email }}">
+              <span class="social-icon">✉</span> {{ site.email }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author | default: site.title | escape }}. All rights reserved.</p>
+      <p class="footer-built">Built with Jekyll · Hosted on GitHub Pages</p>
+    </div>
+  </div>
+</footer>
