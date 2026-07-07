@@ -10,24 +10,14 @@ permalink: /:categories/:year/:month/:day/:title.html
 
 author:
   name: Satish Mane
-  email: satishmane-sam@users.noreply.github.com
 
 github_username: satishmane-sam
 
 header_pages:
   - about.md
 
-minima:
-  skin: auto
-  social_links:
-    github: satishmane-sam
-    rss: atom
-
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
 exclude:
   - README.md
-  - Gemfile
-  - Gemfile.lock
