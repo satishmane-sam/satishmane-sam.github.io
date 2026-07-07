@@ -1,0 +1,320 @@
+---
+---
+
+@import "minima/skins/{{ site.minima.skin | default: 'auto' }}";
+@import "minima/initialize";
+
+/* ── Brand palette (matches post pages) ─────────────────────── */
+:root {
+  --brand-bg: #fdfdfd;
+  --brand-ink: #111;
+  --brand-muted: #6b7280;
+  --brand-accent: #2a7ae2;
+  --brand-accent-dark: #1756a9;
+  --brand-hero-from: #0d1117;
+  --brand-hero-to: #161b22;
+  --brand-green: #3fb950;
+  --brand-border: #e8e8e8;
+  --brand-card: #ffffff;
+  --brand-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-bg: #0d1117;
+    --brand-ink: #e6edf3;
+    --brand-muted: #8b949e;
+    --brand-accent: #58a6ff;
+    --brand-accent-dark: #79c0ff;
+    --brand-hero-from: #010409;
+    --brand-hero-to: #0d1117;
+    --brand-green: #3fb950;
+    --brand-border: #30363d;
+    --brand-card: #161b22;
+    --brand-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+body {
+  background-color: var(--brand-bg);
+  color: var(--brand-ink);
+}
+
+.site-header {
+  border-top: 4px solid var(--brand-green);
+  border-bottom: 1px solid var(--brand-border);
+  background: var(--brand-card);
+}
+
+.site-title,
+.site-title:visited {
+  font-weight: 600;
+  color: var(--brand-ink);
+}
+
+.site-nav .page-link {
+  color: var(--brand-muted);
+  font-weight: 500;
+}
+
+.site-nav .page-link:hover {
+  color: var(--brand-accent);
+  text-decoration: none;
+}
+
+/* ── Homepage hero ──────────────────────────────────────────── */
+.home .hero {
+  background: linear-gradient(135deg, var(--brand-hero-from) 0%, var(--brand-hero-to) 100%);
+  border: 1px solid var(--brand-border);
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #e6edf3;
+  box-shadow: var(--brand-shadow);
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.hero-tagline {
+  font-size: 1.35rem;
+  color: #c9d1d9;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+.hero-intro {
+  max-width: 38rem;
+  line-height: 1.7;
+  color: #8b949e;
+  margin-bottom: 1.75rem;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--brand-green);
+  color: #0d1117;
+}
+
+.btn-primary:hover {
+  color: #0d1117;
+  box-shadow: 0 4px 14px rgba(63, 185, 80, 0.35);
+}
+
+.btn-ghost {
+  border: 1px solid #484f58;
+  color: #e6edf3;
+}
+
+.btn-ghost:hover {
+  border-color: var(--brand-green);
+  color: var(--brand-green);
+}
+
+.hero-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-tags li {
+  background: rgba(63, 185, 80, 0.12);
+  border: 1px solid rgba(63, 185, 80, 0.35);
+  color: var(--brand-green);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ── Highlight cards ────────────────────────────────────────── */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.highlight-card {
+  background: var(--brand-card);
+  border: 1px solid var(--brand-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--brand-shadow);
+}
+
+.highlight-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--brand-ink);
+}
+
+.highlight-card p {
+  color: var(--brand-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── About strip ────────────────────────────────────────────── */
+.about-strip {
+  background: var(--brand-card);
+  border-left: 4px solid var(--brand-accent);
+  border-radius: 0 10px 10px 0;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid var(--brand-border);
+  border-right: 1px solid var(--brand-border);
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.about-strip h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-strip p {
+  color: var(--brand-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Post list (home) — match blog post feel ────────────────── */
+.home .page-heading {
+  display: none;
+}
+
+.home .post-list-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand-green);
+  display: inline-block;
+}
+
+.home .post-list {
+  margin-left: 0;
+}
+
+.home .post-list > li {
+  background: var(--brand-card);
+  border: 1px solid var(--brand-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--brand-shadow);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.home .post-list > li:hover {
+  border-color: var(--brand-green);
+  transform: translateY(-2px);
+}
+
+.home .post-meta {
+  color: var(--brand-muted);
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.home .post-link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brand-accent);
+  line-height: 1.4;
+}
+
+.home .post-link:hover {
+  color: var(--brand-accent-dark);
+  text-decoration: none;
+}
+
+.home .rss-subscribe {
+  margin-top: 1.5rem;
+  color: var(--brand-muted);
+  font-size: 0.9rem;
+}
+
+/* ── Post pages — polish to match ─────────────────────────── */
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.post-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.post-content h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.post-content pre {
+  border-radius: 8px;
+  border-color: var(--brand-border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--brand-border);
+  background: var(--brand-card);
+}
+
+@media screen and (max-width: 600px) {
+  .home .hero {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+}
