@@ -8,4 +8,188 @@
   code, pre, .highlight {
     font-family: "JetBrains Mono", ui-monospace, monospace !important;
   }
+
+  .site-header {
+    border-top: 4px solid #3fb950 !important;
+  }
+
+  .site-title { font-weight: 600 !important; }
+
+  .home .page-heading { display: none; }
+
+  .home .hero {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #e6edf3;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #3fb950;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+
+  .hero-tagline {
+    font-size: 1.35rem;
+    color: #c9d1d9;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-intro {
+    max-width: 38rem;
+    line-height: 1.7;
+    color: #8b949e;
+    margin-bottom: 1.75rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: #3fb950;
+    color: #0d1117 !important;
+  }
+
+  .btn-primary:hover { box-shadow: 0 4px 14px rgba(63, 185, 80, 0.35); text-decoration: none; }
+
+  .btn-ghost {
+    border: 1px solid #484f58;
+    color: #e6edf3 !important;
+  }
+
+  .btn-ghost:hover { border-color: #3fb950; color: #3fb950 !important; text-decoration: none; }
+
+  .hero-tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hero-tags li {
+    background: rgba(63, 185, 80, 0.12);
+    border: 1px solid rgba(63, 185, 80, 0.35);
+    color: #3fb950;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .highlight-card {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .highlight-card h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .highlight-card p { color: #6b7280; font-size: 0.95rem; line-height: 1.6; margin: 0; }
+
+  .about-strip {
+    background: #fff;
+    border-left: 4px solid #2a7ae2;
+    border-radius: 0 10px 10px 0;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid #e8e8e8;
+    border-left: 4px solid #2a7ae2;
+  }
+
+  .about-strip h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+  .about-strip p { color: #6b7280; line-height: 1.7; margin: 0; }
+
+  .home .post-list-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3fb950;
+    display: inline-block;
+  }
+
+  .home .post-list { margin-left: 0; }
+
+  .home .post-list > li {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    list-style: none;
+  }
+
+  .home .post-list > li:hover {
+    border-color: #3fb950;
+    transform: translateY(-2px);
+    transition: 0.15s ease;
+  }
+
+  .home .post-link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2a7ae2;
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .post-title { font-weight: 700; letter-spacing: -0.02em; }
+
+  .post-content h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .post-content pre { border-radius: 8px; }
+
+  @media (max-width: 600px) {
+    .home .hero { padding: 2rem 1.25rem; }
+    .hero-actions { flex-direction: column; }
+  }
 </style>
