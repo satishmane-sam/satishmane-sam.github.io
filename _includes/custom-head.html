@@ -290,10 +290,25 @@
 
   .footer-social a:hover { color: var(--green); }
 
-  .social-icon {
-    font-family: "JetBrains Mono", monospace;
+  .social-svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
     color: var(--green);
-    font-size: 0.9rem;
+    transition: 0.15s;
+  }
+
+  .footer-social a:hover .social-svg { color: inherit; }
+
+  a.tag-pill {
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+
+  a.tag-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
   }
 
   .footer-bottom {

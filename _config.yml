@@ -21,8 +21,10 @@ social:
   name: Satish Mane
   links:
     - https://github.com/satishmane-sam
+    - https://linkedin.com/in/satishmane-code
 
 github_username: satishmane-sam
+linkedin_username: satishmane-code
 
 header_pages:
   - about.md
