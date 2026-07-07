@@ -7,6 +7,7 @@ lang: en
 theme: minima
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title.html
+show_excerpts: true
 
 author:
   name: Satish Mane
@@ -15,6 +16,9 @@ github_username: satishmane-sam
 
 header_pages:
   - about.md
+
+minima:
+  date_format: "%b %-d, %Y"
 
 plugins:
   - jekyll-feed

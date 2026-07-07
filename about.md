@@ -4,19 +4,31 @@ title: About
 permalink: /about/
 ---
 
-I'm **Satish Mane**, a Linux and DevOps practitioner focused on practical infrastructure work.
+<div class="about-page">
 
-This site is where I publish:
+I'm **Satish Mane** — a Linux and DevOps practitioner who writes about real infrastructure work, not theory.
 
-- **Troubleshooting notes** — what broke, why, and the exact fix
-- **Small open-source tools** — CLIs and scripts for everyday ops
+## What you'll find here
+
+- **Troubleshooting notes** — what broke, why, and the exact commands that fixed it
+- **Small open-source tools** — CLIs and scripts for everyday ops work
 - **Workflow tips** — systemd, Kubernetes, Fedora/RHEL, automation
+
+## Topics I cover
+
+| Area | Examples |
+|------|----------|
+| systemd | Unit files, journalctl, failed services |
+| Kubernetes | Contexts, deploy checks, cluster quirks |
+| Fedora / RHEL | dnf upgrades, package path changes |
+| Automation | Ansible, shell scripts, CI pipelines |
 
 ## Connect
 
-- GitHub: [satishmane-sam](https://github.com/satishmane-sam)
-- Topics I write about: Linux, DevOps, Kubernetes, systemd, Fedora, Ansible
+- **GitHub:** [satishmane-sam](https://github.com/satishmane-sam)
+- **Blog home:** [satishmane-sam.github.io](https://satishmane-sam.github.io/)
+- **RSS:** [feed.xml](https://satishmane-sam.github.io/feed.xml)
 
----
+</div>
 
-*Built with Jekyll on GitHub Pages.*
+*Built with Jekyll on GitHub Pages. Posts are published from my local automation workflow.*
