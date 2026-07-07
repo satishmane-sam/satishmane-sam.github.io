@@ -1,0 +1,6 @@
+title: "Satish Mane"
+description: "Linux & DevOps — small tools, real fixes, no fluff."
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
